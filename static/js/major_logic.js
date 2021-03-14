@@ -178,10 +178,14 @@ d3.json(recentQuakes, function(data) {
 // 9. Close the braces and parentheses for the major earthquake data.
 });
 
-var plateSheet = "static/js/PB2002_boundaries.json";
+//i made it local just for ease. but since we're sending this out let's make it web-based
+// var plateSheet = "static/js/PB2002_boundaries.json";
 
+let plateSheet = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json";
+
+//switch to fuschia now that we have night map
 var tectonStyle = {
-  color: "black",
+  color: "#ff007f",
   weight: 4
 };
 
@@ -199,7 +203,6 @@ d3.json(plateSheet, function(data) {
   }).addTo(plateLines);
   plateLines.addTo(map);  
 });
-
 
 // Here we create a legend control object.
 let legend = L.control({

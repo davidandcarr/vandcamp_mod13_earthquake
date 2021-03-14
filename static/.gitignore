@@ -1,4 +1,2 @@
 # Ignore the config.js file.
 config.js;
-logic.js;
-challenge_logic.js;
